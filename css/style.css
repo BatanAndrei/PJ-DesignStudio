@@ -293,14 +293,41 @@
     right: 30px;
 }
 
-.cub2__second-section{
+
+.images__second-section {
+    display: flex;
     position: relative;
+    background-size: cover;
+    background-position: center center;
     width: 681px;
     height: 484px;
     top: -210px;
     right: -20px;
-    background-image: url('../images/image 2.1.slider.png');
+
+    border: 1px solid white
+   
+    /* background-image: url('../images/image 2.1.slider.png'); */
 }
+
+.galery .image{
+    position: absolute;
+    background-size: cover;
+    background-position: center center;
+    width: 681px;
+    height: 484px;
+    opacity: 0;
+    transition: opacity 800ms ease;
+
+    border: 1px solid red;
+}
+.galery .image.active {
+    opacity: 1;
+  }
+
+
+
+
+
 
 .cub1__paragraf-top{
     margin-top: 0;
@@ -335,7 +362,11 @@
     
 }
 
-.second-section_arrows{
+/* .second-section_arrow .image.active {
+    opacity: 1;
+  } */
+
+.second-section_arrow{
     width: 50px;
     height: 12;
     cursor: pointer;
