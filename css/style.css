@@ -304,8 +304,6 @@
     top: -210px;
     right: -20px;
 
-    border: 1px solid white
-   
     /* background-image: url('../images/image 2.1.slider.png'); */
 }
 
@@ -318,7 +316,7 @@
     opacity: 0;
     transition: opacity 800ms ease;
 
-    border: 1px solid red;
+    /* border: 1px solid white; */
 }
 .galery .image.active {
     opacity: 1;
