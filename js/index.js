@@ -30,7 +30,7 @@ function initSlider(){
     initImages();
     initArrows();
     initDots();
-    initText();
+    initTextLink();
 
 
 
@@ -78,7 +78,7 @@ function initSlider(){
 
 
 
-     function initText(){
+     function initTextLink(){
 
         images.forEach((image, index) => {
             let text = `<li><a class="navigation__item2 title n${index} ${index === 0? "active" : ""}" data-index="${index}">${images[index].text_link}</a></li>`;
