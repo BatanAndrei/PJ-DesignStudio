@@ -71,7 +71,7 @@ function initSlider(){
            console.log(text);
     text.addEventListener("click", function() {
         moveSlider(this.dataset.index);
-       
+       // ${index === 0? "navigation__item_admiral" : "navigation__item2"}
  })
 });
 }  
@@ -80,6 +80,8 @@ function initSlider(){
     function moveSlider(num) {
         sliderImages.querySelector('.active').classList.remove('active');
         sliderImages.querySelector('.n' + num).classList.add('active');
+        sliderText.querySelector('.active').classList.remove('active');
+        sliderText.querySelector('.n' + num).classList.add('active');
     }
 };
 

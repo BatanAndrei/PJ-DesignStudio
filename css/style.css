@@ -436,9 +436,10 @@
 
     color: #E3B873;
 }
-.navigation__item_admiral:hover{
+
+/* .navigation__item_admiral:hover{
     color: #FFFFFF;
-}
+} */
 
 .navigation__item2{
     font-size: 14px;
@@ -453,8 +454,9 @@
     color: rgba(255, 255, 255, 0.3);
 }
 
-.navigation__item2:hover{
-    color: #FFFFFF;
+.navigation__item2:hover, .navigation__item2.active{
+    color: #E3B873;
+    border-bottom: 2px solid #E3B873;
 }
 
 /* .hr{
