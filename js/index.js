@@ -1,12 +1,13 @@
 let images = [{
     url: './images/image 2.1.slider.png',
-    text: 'Rostov-on-Don, Admiral',
+    text_link: 'Rostov-on-Don, Admiral',
+    text_info1: ''
 },{
     url: './images/image 2.2.slider.png',
-    text: 'Sochi Thieves',
+    text_link: 'Sochi Thieves',
 },{
     url: './images/image 2.3.slider.png',
-    text: 'Rostov-on-Don Patriotic',
+    text_link: 'Rostov-on-Don Patriotic',
 }];
 
 
@@ -21,7 +22,10 @@ function initSlider(){
     initImages();
     initArrows();
     initDots();
-    initText()
+    initText();
+
+
+
 
     function initImages(){
        images.forEach((image, index) => {
@@ -29,6 +33,10 @@ function initSlider(){
         sliderImages.innerHTML += imageDiv;
        })
     };
+
+
+
+
     function initArrows(){
         sliderArrows.querySelectorAll(".second-section_arrow").forEach(arrow => {
            arrow.addEventListener('click', function(){
@@ -43,6 +51,8 @@ function initSlider(){
            });
         });
     }
+
+
 
       
     function initDots(){
@@ -63,7 +73,7 @@ function initSlider(){
      function initText(){
 
         images.forEach((image, index) => {
-            let text = `<li><a class="navigation__item2 title n${index} ${index === 0? "active" : ""}" data-index="${index}">${images[index].text}</a></li>`;
+            let text = `<li><a class="navigation__item2 title n${index} ${index === 0? "active" : ""}" data-index="${index}">${images[index].text_link}</a></li>`;
             sliderText.innerHTML += text;
          });
         
@@ -82,8 +92,11 @@ function initSlider(){
         sliderImages.querySelector('.n' + num).classList.add('active');
         sliderText.querySelector('.active').classList.remove('active');
         sliderText.querySelector('.n' + num).classList.add('active');
+        sliderDots.querySelector('.active').classList.remove('active');
+        sliderDots.querySelector('.n' + num).classList.add('active');
     }
 };
+
 
 document.addEventListener("DOMContentLoaded", function() {
     initSlider();
