@@ -1,13 +1,21 @@
 let images = [{
     url: './images/image 2.1.slider.png',
     text_link: 'Rostov-on-Don, Admiral',
-    text_info1: ''
+    text_info1: 'Rostov-on-Don LCD admiral',
+    text_info2: '81 m2',
+    text_info3: '3.5 months',
 },{
     url: './images/image 2.2.slider.png',
     text_link: 'Sochi Thieves',
+    text_info1: 'Sochi Thieves',
+    text_info2: '105 m2',
+    text_info3: '4 months',
 },{
     url: './images/image 2.3.slider.png',
     text_link: 'Rostov-on-Don Patriotic',
+    text_info1: 'Rostov-on-Don Patriotic',
+    text_info2: '93 m2',
+    text_info3: '3 months',
 }];
 
 
@@ -81,7 +89,7 @@ function initSlider(){
            console.log(text);
     text.addEventListener("click", function() {
         moveSlider(this.dataset.index);
-       // ${index === 0? "navigation__item_admiral" : "navigation__item2"}
+      
  })
 });
 }  
