@@ -1,9 +1,12 @@
 let images = [{
     url: './images/image 2.1.slider.png',
+    text: 'Rostov-on-Don, Admiral',
 },{
     url: './images/image 2.2.slider.png',
+    text: 'Sochi Thieves',
 },{
     url: './images/image 2.3.slider.png',
+    text: 'Rostov-on-Don Patriotic',
 }];
 
 
@@ -13,11 +16,12 @@ function initSlider(){
     let sliderImages = document.querySelector(".galery");
     let sliderArrows = document.querySelector(".cub3__second-section_arrows");
     let sliderDots = document.querySelector(".second-section_dot");
-    //let sliderText = document.querySelectorAll(".navigation__item2");
+    let sliderText = document.querySelector(".navigation__menu2");
 
     initImages();
     initArrows();
     initDots();
+    initText()
 
     function initImages(){
        images.forEach((image, index) => {
@@ -52,15 +56,25 @@ function initSlider(){
             })
     })
 
-    // sliderText.forEach(text => {
-    //     text.addEventListener("click", function() {
-    //         moveSlider(this.dataset.index);
-    //  })
-
 }
 
 
+
+     function initText(){
+
+        images.forEach((image, index) => {
+            let text = `<li><a class="navigation__item2 title n${index} ${index === 0? "active" : ""}" data-index="${index}">${images[index].text}</a></li>`;
+            sliderText.innerHTML += text;
+         });
         
+        sliderText.querySelectorAll(".navigation__item2").forEach(text => {
+           console.log(text);
+    text.addEventListener("click", function() {
+        moveSlider(this.dataset.index);
+       
+ })
+});
+}  
 
 
     function moveSlider(num) {
