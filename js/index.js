@@ -13,6 +13,7 @@ function initSlider(){
     let sliderImages = document.querySelector(".galery");
     let sliderArrows = document.querySelector(".cub3__second-section_arrows");
     let sliderDots = document.querySelector(".second-section_dot");
+    //let sliderText = document.querySelectorAll(".navigation__item2");
 
     initImages();
     initArrows();
@@ -39,9 +40,7 @@ function initSlider(){
         });
     }
 
-
-
-
+      
     function initDots(){
         images.forEach((image, index) => {
            let dot = `<div class="second-section_dot-item n${index} ${index === 0? "active" : ""}" data-index="${index}"></div>`;
@@ -52,7 +51,16 @@ function initSlider(){
                 moveSlider(this.dataset.index);
             })
     })
+
+    // sliderText.forEach(text => {
+    //     text.addEventListener("click", function() {
+    //         moveSlider(this.dataset.index);
+    //  })
+
 }
+
+
+        
 
 
     function moveSlider(num) {
