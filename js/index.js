@@ -12,9 +12,11 @@ function initSlider(){
 
     let sliderImages = document.querySelector(".galery");
     let sliderArrows = document.querySelector(".cub3__second-section_arrows");
+    let sliderDots = document.querySelector(".second-section_dot");
 
     initImages();
     initArrows();
+    initDots();
 
     function initImages(){
        images.forEach((image, index) => {
@@ -36,6 +38,22 @@ function initSlider(){
            });
         });
     }
+
+
+
+
+    function initDots(){
+        images.forEach((image, index) => {
+           let dot = `<div class="second-section_dot-item n${index} ${index === 0? "active" : ""}" data-index="${index}"></div>`;
+           sliderDots.innerHTML += dot;
+        });
+        sliderDots.querySelectorAll(".second-section_dot-item").forEach(dot => {
+            dot.addEventListener("click", function() {
+                moveSlider(this.dataset.index);
+            })
+    })
+}
+
 
     function moveSlider(num) {
         sliderImages.querySelector('.active').classList.remove('active');
