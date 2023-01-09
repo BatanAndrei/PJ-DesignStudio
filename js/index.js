@@ -86,7 +86,7 @@ function initSlider(){
          });
         
         sliderText.querySelectorAll(".navigation__item2").forEach(text => {
-           console.log(text);
+           //console.log(text);
     text.addEventListener("click", function() {
         moveSlider(this.dataset.index);
       
